@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://actiongames.live/all-games.html"> 
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Play Free Online Action Games | actiongames.live</title>
+    <meta name="description" content="Discover and play a wide variety of free online action games, including roguelikes, shooters, and adventure titles. No download required!">
+    
+    <meta property="og:title" content="Play Free Online Action Games | actiongames.live">
+    <meta property="og:description" content="Discover and play a wide variety of free online action games, including roguelikes, shooters, and adventure titles. No download required!">
+    <meta property="og:image" content="https://actiongames.live/screenshots/site-preview.jpg"> <meta property="og:url" content="https://actiongames.live/all-games.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* Custom CSS for responsive iframe container */
+        .game-container {
+            position: relative;
+            /* For PC, min(80vh, 100%) ensures it doesn't get too tall on very wide screens, but fills available width. */
+            /* For mobile, 100% (of width) for square or near-square aspect ratio, then adjusted with max-height. */
+            /* This is a common pattern for responsive video/iframe. Adjust padding-top for desired aspect ratio (e.g., 56.25% for 16:9) */
+            padding-top: min(80vh, 100%); /* This creates a responsive height based on width or viewport height */
+            height: 0; /* Required for the padding-top trick */
+            overflow: hidden;
+            background-color: #f0f0f0; /* Light background for loading */
+        }
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* PC specific height adjustment using media query */
+            /* This will be handled by Tailwind's responsive classes for overall layout,
+               but for the iframe itself, this ensures the minimum height. */
+        }
+
+        /* PC specific iframe height constraint (if needed beyond the container's padding-top) */
+        @media (min-width: 1024px) { /* Equivalent to Tailwind's lg breakpoint */
+            .game-container iframe {
+                min-height: 600px; /* PC: IFrame height ≥ 600px */
+            }
+        }
+
+        /* Mobile specific height (100vh adaptive) is handled by flex/grid and the padding-top trick */
+        @media (max-width: 767px) { /* Equivalent to Tailwind's sm breakpoint */
+            .game-container {
+                /* On mobile, prioritize filling the viewport height if possible, while maintaining aspect ratio */
+                padding-top: 100%; /* Default to 1:1 aspect ratio on mobile if desired, or adjust for game content */
+                height: auto; /* Allow height to be determined by padding-top */
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-900">
+                <a href="/" class="hover:text-gray-700">actiongames.live</a>
+            </h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#games" class="text-gray-700 hover:text-gray-900 font-medium">Games</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-gray-900 font-medium">About</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <section id="hero" class="text-center mb-16">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">Your Destination for Free Online Action Games</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Dive into thrilling adventures, intense combat, and captivating stories. Play directly in your browser, no downloads needed!</p>
+        </section>
+
+        <section id="games" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 md:p-8">
+                <div class="relative mb-6 pb-[min(80vh,100%)] h-0 overflow-hidden game-container">
+                    <iframe src="https://html-classic.itch.zone/html/6295935/ItchWebDemoV3/index.html" 
+                            allowfullscreen="" 
+                            frameborder="0" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">PUTRID SHOT ULTRA (Demo)</h3>
+                <p class="text-lg text-gray-700 mb-4">A Roguelike, Shoot 'Em Up game. Cast Spells with your Magic Pistol! Stack spells on spells on spells! Fight Challenging Elites and Bosses!</p>
+                <div class="space-y-2 mb-4">
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Category:</strong> Action</p>
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Type:</strong> Roguelike, Shoot 'Em Up</p>
+                </div>
+                <a href="https://actiongames.live/action/putrid-shot-ultra-demo.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-semibold">Play Now</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 md:p-8">
+                <div class="relative mb-6 pb-[min(80vh,100%)] h-0 overflow-hidden game-container">
+                    <iframe src="https://html-classic.itch.zone/html/3872485/Red Handed v1.1 (WEBGL)/index.html?v=1732313766" 
+                            allowfullscreen="" 
+                            frameborder="0" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Red Handed</h3>
+                <p class="text-lg text-gray-700 mb-4">A Point-and-click, Mystery game. Red Handed is a point-and-click adventure game where you play as a rogue detective investigating a mysterious mansion to solve a missing persons case. By interacting with the characters, your actions affect your reputation.</p>
+                <div class="space-y-2 mb-4">
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Category:</strong> Visual Novel, Adventure, Puzzle</p>
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Type:</strong> Point-and-click, Mystery</p>
+                </div>
+                <a href="https://actiongames.live/adventure/red-handed.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-semibold">Play Now</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 md:p-8">
+                <div class="relative mb-6 pb-[min(80vh,100%)] h-0 overflow-hidden game-container">
+                    <iframe src="https://html-classic.itch.zone/html/13200376/index.html" 
+                            allowfullscreen="" 
+                            frameborder="0" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Zombotron Re-Boot</h3>
+                <p class="text-lg text-gray-700 mb-4">A 2D Platformer, Zombie Shooter game. In this action-platformer, you will fight countless enemies, including zombies, robots, and mysterious monsters. Find weapons, upgrade skills, rescue survivors, and explore the mysterious planet of Zombotron.</p>
+                <div class="space-y-2 mb-4">
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Category:</strong> Platformer, Action, Shooter</p>
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Type:</strong> 2D Platformer, Zombie Shooter</p>
+                </div>
+                <a href="https://actiongames.live/platformer/zombotron-re-boot.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-semibold">Play Now</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 md:p-8">
+                <div class="relative mb-6 pb-[min(80vh,100%)] h-0 overflow-hidden game-container">
+                    <iframe src="https://html-classic.itch.zone/html/4831099-484160/index.html?v=1732313738" 
+                            allowfullscreen="" 
+                            frameborder="0" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Thermomorph</h3>
+                <p class="text-lg text-gray-700 mb-4">A Horror, Survival game. Armed with a motion sensor and a flamethrower, you must survive until the escape pod is repaired. This game is inspired by Five Nights at Freddy's and the movie Alien.</p>
+                <div class="space-y-2 mb-4">
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Category:</strong> Action</p>
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Type:</strong> Horror, Survival</p>
+                </div>
+                <a href="https://actiongames.live/action/thermomorph.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-semibold">Play Now</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-6 md:p-8">
+                <div class="relative mb-6 pb-[min(80vh,100%)] h-0 overflow-hidden game-container">
+                    <iframe src="https://html-classic.itch.zone/html/11469871/index.html?v=1732313545" 
+                            allowfullscreen="" 
+                            frameborder="0" 
+                            loading="lazy">
+                    </iframe>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-2">Volunteer to the Darkness</h3>
+                <p class="text-lg text-gray-700 mb-4">A First-Person Shooter, Horror game. Volunteer to the Darkness is a first-person action shooter game following Jose's perilous journey to the United States. He must navigate harrowing challenges in a brutal competition to save his love, Lucia, where victory means freedom and failure means death.</p>
+                <div class="space-y-2 mb-4">
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Category:</strong> Shooter, Action</p>
+                    <p class="text-sm text-gray-600"><strong class="font-semibold">Type:</strong> First-Person Shooter, Horror</p>
+                </div>
+                <a href="https://actiongames.live/shooter/volunteer-to-the-darkness.html" class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-semibold">Play Now</a>
+            </div>
+
+        </section>
+
+        <section id="about" class="mt-20 py-12 border-t border-gray-200">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">About actiongames.live</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center">
+                At actiongames.live, we are passionate about bringing you the best free online action games directly to your browser. Our mission is to provide an accessible and engaging platform where you can discover new adventures and challenge yourself with exciting gameplay, all without the hassle of downloads or installations. We believe in high-quality, instant fun for everyone!
+            </p>
+        </section>
+
+        <section id="contact" class="mt-16 py-12 border-t border-gray-200">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">Get in Touch</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto text-center">
+                Have questions, feedback, or game suggestions? We'd love to hear from you! Reach out to us at <a href="mailto:contact@actiongames.live" class="text-blue-600 hover:underline">contact@actiongames.live</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 text-gray-600 py-8 mt-12">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2023 actiongames.live. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:underline">Privacy Policy</a> | 
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
